@@ -1,8 +1,11 @@
 # Backtester + PCA Eigenportfolio Creation
 
-> Event-driven backtesting engine + Principal Component Analysis (PCA) and correlation regime exploration via eigenportfolios
-> Backtesting basic strategies on SPY: Moving Average Crossover, Time Series Momentum (TSMOM), Bollinger Bands, Relative Strength Index (RSI)
-> Backtesting more complex strategy: TSMOM multi-asset (SPY, TLT, GLD, EEM, DBC)
+> Event-driven backtesting engine + Principal Component Analysis (PCA) and correlation regime exploration via eigenportfolios\
+> \
+> Backtesting basic strategies on SPY: Moving Average Crossover, Time Series Momentum (TSMOM), Bollinger Bands, Relative Strength Index (RSI)\
+> \
+> Backtesting more complex strategy: TSMOM multi-asset (SPY, TLT, GLD, EEM, DBC)\
+> \
 > Principal Component Analysis utilized to construct eigenportfolios for multi-asset portfolio and for only SPY
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
