@@ -6,7 +6,9 @@
 > \
 > Backtesting more complex strategy: TSMOM multi-asset (SPY, TLT, GLD, EEM, DBC)\
 > \
-> Principal Component Analysis utilized to construct eigenportfolios for multi-asset portfolio and for only SPY
+> Principal Component Analysis utilized to construct eigenportfolios for multi-asset portfolio (SPY, TLT, GLD, EEM, DBC)\
+> \
+> For non-technical breakdown, refer to (reports/figures/EXPLAINER.md).
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -242,12 +244,13 @@ backtester-pca-eigenportfolio/
 ├── data/                         
 │   └── .gitkeep
 │
-└── reports/
-    ├── eigenportfolio_memo.md
-    ├── ma_cross_memo.md
+└── reports/figures
+    ├── EXPLAINER/md
+    ├── fig9_equity_curves.png
+    ├── fig10_sr_by_split.png
     └── figures/
-        ├── fig9_equity_curves.jpg
-        └── fig10_sr_by_split.jpg
+        ├── fig9_equity_curves.png
+        └── 
 ```
 
 ---
