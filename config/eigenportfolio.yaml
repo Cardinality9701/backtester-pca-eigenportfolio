@@ -1,0 +1,70 @@
+run_name: "eigenportfolio"
+
+data:
+  tickers: ["SPY", "TLT", "GLD", "EEM", "DBC"]
+  aux_tickers: []
+  start: "2008-01-01"
+  end: "2024-12-31"
+  buffer_size: 320
+
+strategy:
+  type: "Eigenportfolio"
+  lookback: 252
+  n_components: 3
+  rebalance_every: 21
+  vol_target: 0.10
+
+risk:
+  initial_capital: 500000
+  risk_fraction: 1.0
+
+execution:
+  commission_pct: 0.001
+  slippage_bps: 5.0
+
+analytics:
+  trading_days_per_year: 252
+
+walk_forward:
+  method: "anchored"
+  oos_months: 12
+  is_months: 48
+  folds: 5
+
+output:
+  results_dir: "outputs/eigenportfolio"
+
+ewm:
+  half_lives: [21, 63, 126]
+  warmup_multiplier: 2
+
+pca:
+  variance_threshold: 0.90
+
+risk_monitor:
+  absorption_ratio_short_window: 21
+  absorption_ratio_long_window: 126
+
+eigenportfolio:
+  num_components: 3
+  ann_factor: 252.0
+  halflife_primary: 63
+
+ledoit_wolf:
+  window: 252
+  assume_centered: false
+
+vix:
+  ticker: "^VIX"
+  threshold: 20.0
+  smoothing_window: 5
+
+regime_strats:
+  target_vol: 0.10
+  cost_bps: 5.0
+  max_leverage: 2.0
+  exit_threshold_signal: -0.5 # z-score
+
+splits:
+  train_end: "2018-12-31"
+  val_end:   "2021-12-31"

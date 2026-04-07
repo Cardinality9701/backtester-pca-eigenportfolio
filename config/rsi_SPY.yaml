@@ -1,0 +1,39 @@
+run_name: "rsi_SPY"
+
+data:
+  tickers: ["SPY"]
+  aux_tickers: ["VIX"]
+  start: "2005-01-01"
+  end: "2024-12-31"
+  buffer_size: 100
+
+strategy:
+  type: "RSI"
+  rsi_period: 14
+  oversold: 30.0
+  overbought: 70.0
+
+risk:
+  initial_capital: 100000
+  risk_fraction: 0.10
+
+execution:
+  commission_pct: 0.001
+  slippage_bps: 5.0
+
+analytics:
+  trading_days_per_year: 252
+
+walk_forward:
+  method: "rolling"         # rolling WF; recent regime more predictive for mean-reversion
+  oos_months: 12
+  is_months: 48
+  folds: 5
+
+regime_filter:
+  enabled: true
+  vix_ticker: "VIX"
+  vix_threshold: 20.0
+  vix_smoothing_window: 5
+  suppress_direction: "LONG"
+  exit_on_suppress: true

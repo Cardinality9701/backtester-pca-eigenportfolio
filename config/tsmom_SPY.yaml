@@ -1,0 +1,33 @@
+run_name: "tsmom_SPY"
+
+data:
+  tickers: ["SPY"]
+  aux_tickers: []
+  start: "2005-01-01"
+  end: "2024-12-31"
+  buffer_size: 320
+
+strategy:
+  type: "TSMOM"
+  lookback_window: 252
+  skip_window: 21
+  vol_window: 60
+  vol_target: 0.15
+  rebalance_every: 21
+
+risk:
+  initial_capital: 100000
+  risk_fraction: 0.10
+
+execution:
+  commission_pct: 0.001
+  slippage_bps: 5.0
+
+analytics:
+  trading_days_per_year: 252
+
+walk_forward:
+  method: "anchored"
+  oos_months: 12
+  is_months: 48
+  folds: 5

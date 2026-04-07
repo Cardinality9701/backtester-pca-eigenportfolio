@@ -1,0 +1,34 @@
+# Runtime outputs — never commit
+data/
+outputs/
+__pycache__/
+*.pyc
+*.pyo
+
+# Research artifacts — too large / regenerated on run
+*.npy
+*.db
+*.csv
+*.png
+*.jpg
+
+# Exceptions — commit these specific files
+!reports/figures/fig9_equity_curves.jpg
+!reports/figures/fig10_sr_by_split.jpg
+!data/.gitkeep
+!outputs/.gitkeep
+
+# Environment
+.env
+*.ipynb_checkpoints/
+.ipynb_checkpoints
+
+# Notebooks
+notebooks/
+*.ipynb
+
+# Colab internal config
+.config/
+
+# Colab sample data
+sample_data/
