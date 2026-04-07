@@ -290,8 +290,10 @@ Available `strategy.type` values: `MovingAverageCross` · `RSI` · `BollingerBan
   PC selection already constitutes the model-selection step. All other strategies
   are compatible with `walk_forward.py`. Error can be safely ignored during run.
 
-- Improve upon PCA eigenportfolio project; introduce some sort of fix (e.g. macro conditioning variable via, 
-  yield curve slope, regime type classification for filtering, adaptive exiting to debug Strategies B and C)
+- Improve upon PCA eigenportfolio project; introduce some sort of fix for negative Sharpe in test regime
+  - Regime type classification for filtering
+  - Macro conditioning variable via yield curve slope
+  - Adaptive exiting to debug Strategies B and C)
 
 ---
 
