@@ -83,7 +83,7 @@ Verifiying the annual return; \
 
 ```bash
 git clone https://github.com/Cardinality9701/backtester-pca-eigenportfolio.git
-cd quant-research-platform
+cd backtester-pca-eigenportfoilo
 pip install -r requirements.txt
 
 # Run any classical strategy
