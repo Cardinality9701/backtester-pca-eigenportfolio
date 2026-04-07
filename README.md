@@ -36,7 +36,7 @@ and the benchmark.
 <summary>Equity curves and Sharpe-by-split figures</summary>
 
 ![Equity Curves by Split](reports/figures/fig9_equity_curves.jpg)
-![Sharpe by Split](reports/figures/fig10_sr_by_split.jpg)
+![Sharpe by Split](reports/figures/fig10_sr_by_split.png)
 
 </details>
 
