@@ -248,9 +248,6 @@ backtester-pca-eigenportfolio/
     ├── EXPLAINER.md
     ├── fig9_equity_curves.png
     ├── fig10_sr_by_split.png
-    └── figures/
-        ├── fig9_equity_curves.png
-        └── 
 ```
 
 ---
