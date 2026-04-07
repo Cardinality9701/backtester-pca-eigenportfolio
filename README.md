@@ -39,7 +39,7 @@ All CAGRs independently verified: (Final Equity / Initial Capital)^(1/n_years) �
 
 ### Project 2 — PCA Eigenportfolio Regime Strategy (2008–2024)
 
-A 4-phase pipeline that constructs rolling eigenportfolios from five multi-asset
+A pipeline that constructs rolling eigenportfolios from five multi-asset
 ETFs (SPY, TLT, GLD, EEM, DBC), detects correlation regime changes via the
 Absorption Ratio (ΔAR), and conditions a long-only strategy on the regime signal.
 
@@ -216,13 +216,13 @@ backtester-pca-eigenportfolio/
 │   ├── spectral_decomposer.py
 │   ├── risk_monitor.py           # Absorption Ratio
 │   ├── eigenportfolio.py
-│   ├── predictive_analysis.py    # Phase 3: ΔAR → VIX
+│   ├── predictive_analysis.py    # ΔAR → VIX
 │   ├── visualizer.py             # Figures 1–7
-│   ├── regime_classifier.py      # Phase 4: PC selection, regime labelling
-│   ├── signal_generator.py       # Phase 4: Exit strategies A/B/C
-│   ├── backtester.py             # Phase 4: Vol-scaled backtesting
-│   ├── performance_evaluator.py  # Phase 4: Performance reporting
-│   └── regime_visualizer.py      # Phase 4: Figures 8–10
+│   ├── regime_classifier.py      # PC selection, regime labelling
+│   ├── signal_generator.py       # Exit strategies A/B/C
+│   ├── backtester.py             # Vol-scaled backtesting
+│   ├── performance_evaluator.py  # Performance reporting
+│   └── regime_visualizer.py      # Figures 8–10
 │
 ├── config/                       # One YAML per strategy run
 │   ├── eigenportfolio.yaml
@@ -233,7 +233,7 @@ backtester-pca-eigenportfolio/
 │   └── tsmom_multi.yaml
 │
 ├── run_backtest.py               # Entry point: engine strategies
-├── run_eigenportfolio.py         # Entry point: PCA pipeline (Phases 1–4)
+├── run_eigenportfolio.py         # Entry point: PCA pipeline
 ├── sensitivity.py                # Parameter sweep heatmap
 ├── walk_forward.py               # Anchored / rolling walk-forward validation
 ├── tearsheet.py                  # Multi-panel tearsheet generator
@@ -245,7 +245,7 @@ backtester-pca-eigenportfolio/
 │   └── .gitkeep
 │
 └── reports/figures
-    ├── EXPLAINER/md
+    ├── EXPLAINER.md
     ├── fig9_equity_curves.png
     ├── fig10_sr_by_split.png
     └── figures/
