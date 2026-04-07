@@ -17,7 +17,27 @@
 
 ## Project Summaries
 
-### Project 1 — PCA Eigenportfolio Regime Strategy (2008–2024)
+### Project 1 — Classical Strategies on SPY (2005–2024)
+
+Five rule-based strategies run through the event-driven engine on SPY with
+simulated transaction costs in terms of basis points (10bps commission + 5bps adversarial slippage).
+
+| Strategy | Period | Ann. Return | Sharpe | Max DD | Calmar | Hit Rate | Trades | Final Equity |
+|----------|--------|-------------|--------|--------|--------|----------|--------|-------------|
+| MA Cross | 2010–2024 | 0.21% | 0.2037 | −8.57% | 0.02 | 47.56% | 164 | $103,167 |
+| TSMOM (SPY) | 2005–2024 | 0.65% | 0.4012 | −6.24% | 0.10 | 52.38% | 63 | $113,847 |
+| Bollinger Band | 2005–2024 | 0.50% | 0.4882 | −5.18% | 0.10 | 50.72% | 138 | $110,392 |
+| RSI | 2005–2024 | 0.04% | 0.2155 | −4.43% | 0.01 | 48.91% | 459 | $100,781 |
+| TSMOM (Multi)† | 2008–2024 | 0.79% | 0.2454 | −8.51% | 0.09 | 41.12% | 518 | $571,292 |
+
+*Initial capital $100,000 for single-asset strategies; $500,000 for TSMOM Multi.
+All CAGRs independently verified: (Final Equity / Initial Capital)^(1/n_years) − 1.*
+
+*†TSMOM Multi: SPY, TLT, GLD, EEM, DBC; position sizing each independently by the engine.*
+
+---
+
+### Project 2 — PCA Eigenportfolio Regime Strategy (2008–2024)
 
 A 4-phase pipeline that constructs rolling eigenportfolios from five multi-asset
 ETFs (SPY, TLT, GLD, EEM, DBC), detects correlation regime changes via the
@@ -56,26 +76,6 @@ and the benchmark.
 
 Verifiying the annual return; \
 *Given initial capital $500,000; Compound Annual Growth Rate (CAGR) = ($783,185 / $500,000)^(1/17) − 1 = 2.67%*
-
----
-
-### Project 2 — Classical Strategies on SPY (2005–2024)
-
-Five rule-based strategies run through the event-driven engine on SPY with
-simulated transaction costs in terms of basis points (10bps commission + 5bps adversarial slippage).
-
-| Strategy | Period | Ann. Return | Sharpe | Max DD | Calmar | Hit Rate | Trades | Final Equity |
-|----------|--------|-------------|--------|--------|--------|----------|--------|-------------|
-| MA Cross | 2010–2024 | 0.21% | 0.2037 | −8.57% | 0.02 | 47.56% | 164 | $103,167 |
-| TSMOM (SPY) | 2005–2024 | 0.65% | 0.4012 | −6.24% | 0.10 | 52.38% | 63 | $113,847 |
-| Bollinger Band | 2005–2024 | 0.50% | 0.4882 | −5.18% | 0.10 | 50.72% | 138 | $110,392 |
-| RSI | 2005–2024 | 0.04% | 0.2155 | −4.43% | 0.01 | 48.91% | 459 | $100,781 |
-| TSMOM (Multi)† | 2008–2024 | 0.79% | 0.2454 | −8.51% | 0.09 | 41.12% | 518 | $571,292 |
-
-*Initial capital $100,000 for single-asset strategies; $500,000 for TSMOM Multi.
-All CAGRs independently verified: (Final Equity / Initial Capital)^(1/n_years) − 1.*
-
-*†TSMOM Multi: SPY, TLT, GLD, EEM, DBC; position sizing each independently by the engine.*
 
 ---
 
