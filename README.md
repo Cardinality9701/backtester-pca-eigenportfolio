@@ -1,4 +1,4 @@
-# Backtester + PCA Eigenportfolio Creation
+# Systematic Strategy Research Platform
 
 > Event-driven backtesting engine + Principal Component Analysis (PCA) and correlation regime exploration via eigenportfolios\
 > \
@@ -82,8 +82,8 @@ Verifiying the annual return; \
 ## Quickstart
 
 ```bash
-git clone https://github.com/Cardinality9701/backtester-pca-eigenportfolio.git
-cd backtester-pca-eigenportfoilo
+git clone https://github.com/Cardinality9701/systematic-strategy-research-platform.git
+cd systematic-strategy-research-platform
 pip install -r requirements.txt
 
 # Run any classical strategy
@@ -196,7 +196,7 @@ evaluated across train/val/test splits while avoiding look-ahead bias.
 ## Repo Structure
 
 ```
-backtester-pca-eigenportfolio/
+systematic-strategy-research-platform/
 │
 ├── README.md
 ├── requirements.txt
@@ -290,7 +290,7 @@ Available `strategy.type` values: `MovingAverageCross` · `RSI` · `BollingerBan
   PC selection already constitutes the model-selection step. All other strategies
   are compatible with `walk_forward.py`. Error can be safely ignored during run.
 
-- Improve upon PCA eigenportfolio project; introduce some sort of fix for negative Sharpe in test regime
+- Improve upon PCA eigenportfolio section; introduce some sort of fix for negative Sharpe in test regime
   - Regime type classification for filtering
   - Macro conditioning variable via yield curve slope
   - Adaptive exiting to debug Strategies B and C)
