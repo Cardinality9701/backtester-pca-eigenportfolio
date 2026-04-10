@@ -296,7 +296,7 @@ Available `strategy.type` values: `MovingAverageCross` · `RSI` · `BollingerBan
 - Improve upon PCA eigenportfolio section; introduce some sort of fix for negative Sharpe in test regime
   - Regime type classification for filtering
   - Macro conditioning variable via yield curve slope
-  - Adaptive exiting to debug Strategies B and C)
+  - Adaptive exiting to debug Strategies B and C
 
 ---
 
