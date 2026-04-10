@@ -290,6 +290,9 @@ Available `strategy.type` values: `MovingAverageCross` · `RSI` · `BollingerBan
   PC selection already constitutes the model-selection step. All other strategies
   are compatible with `walk_forward.py`. Error can be safely ignored during run.
 
+- Consistent start and end timeframes for backtester comparison
+  - Confirm where all ETFs have common timeframe and start from latest one   
+
 - Improve upon PCA eigenportfolio section; introduce some sort of fix for negative Sharpe in test regime
   - Regime type classification for filtering
   - Macro conditioning variable via yield curve slope
